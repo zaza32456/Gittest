@@ -71,3 +71,25 @@ commit后,Bash显示如下内容：
 ```
 git push origin dev
 ```
+
+## main
+
+刚才我发现，有一些文字描述有点小错误，于是我修改了一下，add并commit。
+
+现在我又在README.md里增加了对上述操作的说明，然后打算把dev上的内容合并大main里。
+
+### 让我们切换回main分支，现在我们要把dev分支的内容合并到main
+```
+git switch main   //或 git checkout main
+```
+
+此时Bash没有转换分支，反而是给我报了个错误：
+
+```
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+```
+### 报错内容告诉我，我在切换分支前需要commit或者stash，否则会丢失我目前的所有修改。
+这是因为我在coommit后才又在README.md里加了几行字（line75~81），于是我现在打完这句话后会重新add,commit并push,这样就能保证我的修改完整提交到dev并清空工作区，为main分支为下一步的合并做准备。
