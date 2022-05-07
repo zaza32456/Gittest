@@ -93,3 +93,21 @@ Aborting
 ```
 ### 报错内容告诉我，我在切换分支前需要commit或者stash，否则会丢失我目前的所有修改。
 这是因为我在coommit后才又在README.md里加了几行字（line75~81），于是我现在打完这句话后会重新add,commit并push,这样就能保证我的修改完整提交到dev并清空工作区，为main分支为下一步的合并做准备。
+
+## main
+
+```
+$ git merge dev
+Updating e2206bf..fece9c2
+Fast-forward
+ README.md | 73 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 73 insertions(+)
+
+```
+
+### 在执行命令 git merge dev后，我竹汉三又回来啦！
+
+现在main和dev上的内容已经完全一致了，dev已经完成了他的使命，可以光荣退休了。
+
+在删除dev之前，让我们吸取之前的教训，随时记得commit或stash，就像我们玩galgame一样，在面临一个选择前永远要记得给自己留个后路。
+
