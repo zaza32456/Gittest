@@ -118,3 +118,53 @@ $ git commit -m"准备删除dev分支"
 [main XXXXXXX] 准备删除dev分支    //XXXXXXX是此次commit版本号
  1 file changed, 18 insertions(+)
 ```
+
+## main
+
+```
+$ git branch
+  dev
+* main
+
+$ git branch -d dev
+Deleted branch dev (was 775817b).
+
+$ git branch
+* main
+```
+
+刚才我已经用 git branch -d dev 删除了dev分支，现在查看分支，只剩下main了。
+不过我们打开github，会发现dev分支依然存在。
+
+### 这是因为 git branch -d  删除的是本地仓库的分支。
+
+接下来我们还要删除远程仓库的dev分支。
+我们先查看远程仓库的分支情况。
+
+```
+$ git branch -r
+  origin/HEAD -> origin/main
+  origin/dev
+  origin/main
+```
+
+目前远程仓库的dev依然存在。
+
+### 让我们删除远程仓库的dev分支。
+
+```
+$ git push origin -d dev
+To github.com:zaza32456/Gittest.git
+ - [deleted]         dev
+```
+
+### 现在我们再次查看远程仓库分支
+
+```
+$ git branch -r
+  origin/HEAD -> origin/main
+  origin/main
+```
+
+dev分支已经被删除啦~
+打开github确认一下，确实也删除了(*^▽^*)
