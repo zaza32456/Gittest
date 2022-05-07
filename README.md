@@ -111,3 +111,10 @@ Fast-forward
 
 在删除dev之前，让我们吸取之前的教训，随时记得commit或stash，就像我们玩galgame一样，在面临一个选择前永远要记得给自己留个后路。
 
+```
+$ git add README.md
+
+$ git commit -m"准备删除dev分支"
+[main XXXXXXX] 准备删除dev分支    //XXXXXXX是此次commit版本号
+ 1 file changed, 18 insertions(+)
+```
