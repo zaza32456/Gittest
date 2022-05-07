@@ -51,7 +51,7 @@ git push origin dev
 
 ## dev 
 
-提交后突然发现没有新增修改和提交修改，所以dev和main分支的内容是一样一样儿的,还是上次commit时的内容。
+提交后突然发现dev和main分支的内容是一样一样儿的,因为没有新增修改和提交修改，所以还是上次commit时的内容。
 
 ### 让我们重新将修改添加到暂存区，并commit
 
@@ -62,7 +62,7 @@ git commit -m"新建dev分支，并添加在README里添加一些内容"
 commit后,Bash显示如下内容：
 
 ```
-[dev ec30a64] 新建dev分支，并添加在README里添加一些内容   //此次commit后的版本号为ec30a64
+[dev ec30a64] 新建dev分支，并添加在README里添加一些内容   //此次commit的版本号为ec30a64（这里打错字了，多了一个添加）
  1 file changed, 34 insertions(+)   //1个文件被修改（READ.md）,新增了34行内容
 ```
 
